@@ -33,6 +33,9 @@ main {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+.container1 img:last-child{
+    display: none;
+}
 
 p {
   font-family: 'Montserrat', sans-serif; 
@@ -75,4 +78,31 @@ h1 {
 
  button img {
     padding: 0 7px;
+ }
+
+ @media screen and (max-width: 540px) {
+    main{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .container1 img {
+      width: 350px;
+      height: 300px;
+    }
+
+    .container2 {
+        width: 350px;
+        transform: translatey(-5);
+        z-index: -1;
+    }
+    
+    
+    .container1 img:first-child{
+        display: none;
+    }
+    .container1 img:last-child{
+        display: block;
+    }
+    
  }
